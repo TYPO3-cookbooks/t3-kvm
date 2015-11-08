@@ -1,0 +1,7 @@
+name             't3-kvm'
+maintainer       'Andri Steiner'
+maintainer_email 'andri.steiner@typo3.org'
+license          'Apache 2.0'
+description      'Installs/Configures t3-kvm'
+long_description 'Installs/Configures t3-kvm'
+version          '0.1.0'
