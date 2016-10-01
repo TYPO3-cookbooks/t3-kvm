@@ -17,5 +17,15 @@
 # limitations under the License.
 #
 
+template "/etc/sysctl.d/kvm.conf" do
+  source "host/sysctl-kvm.conf"
+  mode 0644
+  notifies :run, "execute[sysctl -p /etc/sysctl.d/kvm.conf]", :immediately
+end
+
+execute "sysctl -p /etc/sysctl.d/kvm.conf" do
+  action :nothing
+end
+
 # This still needs to be done
 #include_recipe "zabbix-custom-checks::kvm-host"
