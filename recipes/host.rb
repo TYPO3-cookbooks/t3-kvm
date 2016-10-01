@@ -1,14 +1,14 @@
 #
 # Cookbook Name:: t3-kvm
-# Recipe:: default
+# Recipe:: host
 #
-# Copyright (C) 2015 Andri Steiner
+# Copyright 2016, TYPO3 Association
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,9 +17,5 @@
 # limitations under the License.
 #
 
-Chef::Log.debug "Node acting as KVM #{node[:virtualization][:role]}"
-include_recipe "t3-kvm::#{node[:virtualization][:role]}"
-
-include_recipe "kvm"
-
-package "virtinst"
+# This still needs to be done
+#include_recipe "zabbix-custom-checks::kvm-host"
