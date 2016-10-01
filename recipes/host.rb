@@ -27,5 +27,11 @@ execute "sysctl -p /etc/sysctl.d/kvm.conf" do
   action :nothing
 end
 
+# Delete sysctl file which was added by Hetzner installimage
+# (if we need any of these values, set them in the above kvm.conf file)
+file "/etc/sysctl.d/99-hetzner.conf" do
+  action :delete
+end
+
 # This still needs to be done
 #include_recipe "zabbix-custom-checks::kvm-host"
