@@ -3,7 +3,7 @@ maintainer       'Andri Steiner'
 maintainer_email 'andri.steiner@typo3.org'
 license          'Apache 2.0'
 description      'Wrapper for the KVM cookbook'
-version          '0.2.0'
+version          '0.2.1'
 
 depends 'kvm', '= 0.4.0'
 
