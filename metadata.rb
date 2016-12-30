@@ -7,9 +7,6 @@ version          '0.2.1'
 
 depends 'kvm', '= 0.4.0'
 
-# for testing
-depends 'apt'
-
 # Pin sysctl cookbook to 0.7.0
 # Otherwise, we run in the following dependency conflict
 # (e.g. in site-proxytypo3org)
